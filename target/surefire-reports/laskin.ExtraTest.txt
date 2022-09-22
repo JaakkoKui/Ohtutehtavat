@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: laskin.ExtraTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.004 s <<< FAILURE! - in laskin.ExtraTest
+laskin.ExtraTest.testNeliojuuri2()  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Luvun 2 neliöjuuri on väärin ==> expected: <1.0> but was: <0.0>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:86)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1003)
+	at laskin.ExtraTest.testNeliojuuri2(ExtraTest.java:59)
+

@@ -31,12 +31,13 @@ public class Laskin {
     }
     
     public void nelio(double n) {
-    	if (n < 0) throw new IllegalArgumentException("Negatiivisella luvulla ei ole neliöjuurta");
+    	if (n < 0) throw new IllegalArgumentException("");
         tulos = n * n;
     }
 
     public void neliojuuri(double n) {
-    	tulos = (int) Math.sqrt(tulos);
+    	if(n < 0) throw new IllegalArgumentException("Negatiivisella luvulla ei ole neliöjuurta");
+    	tulos = 0;
     }
 
     public void virtaON() {

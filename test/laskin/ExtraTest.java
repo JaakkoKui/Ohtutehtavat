@@ -1,6 +1,5 @@
 package laskin;
 
-import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.fail;
@@ -14,7 +13,7 @@ import org.junit.jupiter.api.Test;
 public class ExtraTest extends AbstractParent {
 
     private static Laskin laskin = new Laskin();
-    private final double DELTA = 0.001;
+    private final double DELTA = 0.001f;
 
     @BeforeAll
     public static void testVirtaON() {
@@ -56,21 +55,14 @@ public class ExtraTest extends AbstractParent {
     @Test
     public void testNeliojuuri2() {
         laskin.neliojuuri(2);
-        assertEquals(0, laskin.annaTulos(), DELTA,"Luvun 2 neliöjuuri on väärin");
-		// Tähän assertXXX(), odotetun tuloksen tulee olla (int)Math.sqrt(2)
+        assertEquals(1.0, laskin.annaTulos(), DELTA,"Luvun 2 neliöjuuri on väärin");
     }
     
     @Test
     @DisplayName("Testaa negatiivinen neliöjuuri")
     public void testNeliojuuriNegat() {
-    	laskin.neliojuuri(0);
-    	Exception exception = assertThrows(IllegalArgumentException.class, () -> {
-            Integer.parseInt("1a");
-        });
-
-        String expectedMessage = "For input string";
-        String actualMessage = exception.getMessage();
-
-        assertTrue(actualMessage.contains(expectedMessage));
+         IllegalArgumentException poikkeus = assertThrows(IllegalArgumentException.class, () -> laskin.neliojuuri(-1),
+                 "Negatiivisen argumentin pitää heittää poikkeus.");
+         assertEquals("Negatiivisella luvulla ei ole neliöjuurta", poikkeus.getMessage(), "Poikkeuksen teksti väärä.");
     }
 }

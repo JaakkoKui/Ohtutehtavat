@@ -1,0 +1,28 @@
+-------------------------------------------------------------------------------
+Test set: laskin.LaskinTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 0, Skipped: 0, Time elapsed: 0 s <<< FAILURE! - in laskin.LaskinTest
+laskin.LaskinTest.testLisaa()  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Lukujen 1 ja 2 summa väärin ==> expected: <3.0> but was: <11.0>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:70)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:908)
+	at laskin.LaskinTest.testLisaa(LaskinTest.java:32)
+
+laskin.LaskinTest.testKerro()  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Kertolasku 5*5 väärin ==> expected: <25.0> but was: <80.0>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:70)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:908)
+	at laskin.LaskinTest.testKerro(LaskinTest.java:64)
+
+laskin.LaskinTest.testJaa()  Time elapsed: 0 s  <<< FAILURE!
+org.opentest4j.AssertionFailedError: Jakolasku 8/2 väärin ==> expected: <4.0> but was: <44.0>
+	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
+	at org.junit.jupiter.api.AssertionUtils.failNotEqual(AssertionUtils.java:62)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:70)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:908)
+	at laskin.LaskinTest.testJaa(LaskinTest.java:47)
+
